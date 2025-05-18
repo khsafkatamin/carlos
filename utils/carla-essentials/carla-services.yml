@@ -5,7 +5,7 @@ services:
       service: gpu-x11-service
     privileged: True
     image: rwthika/carla-simulator:server
-    command: bash -ic './CarlaUE4.sh -nosound 2>/dev/null'
+    command: bash -ic './CarlaUE4.sh -nosound -quality-level=Low -RenderOffScreen 2>/dev/null'
   
   carla-server-offscreen:
     extends:
